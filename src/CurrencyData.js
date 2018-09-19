@@ -133,6 +133,13 @@ const CurrencyData = {
         "rounding": 0,
         "code": "BRL"
     },
+    "BCH": {
+      "symbol": "BCH",
+      "symbol_native": "BCH",
+      "decimal_digits": 2,
+      "rounding": 0,
+      "code": "BCH"
+    },
     "BTC": {
       "symbol": "BTC",
       "symbol_native": "BTC",

@@ -16,38 +16,11 @@ const Convenience = Local.imports.convenience;
 const ApiProvider = Local.imports.ApiProvider;
 
 const {
-  ProviderBinance,
-  ProviderBitcoinAverage,
-  ProviderBitstamp,
-  ProviderBitfinex,
-  ProviderPoloniex,
-  ProviderCexio,
-  ProviderCoinbase,
-  ProviderBitPay,
-  ProviderKraken,
-  ProviderBXinTH,
-  ProviderPaymium,
-  ProviderBtcChina,
-  ProviderBTCMarkets,
-  ProviderWex
+  ProviderBitPay
 } = Local.imports;
 
 const {
-  ProviderBinancePrefs,
-  ProviderBitcoinAveragePrefs,
-  ProviderBitstampPrefs,
-  ProviderBitfinexPrefs,
-  ProviderPoloniexPrefs,
-  ProviderCexioPrefs,
-  ProviderCoinbasePrefs,
-  ProviderBitPayPrefs,
-  ProviderKrakenPrefs,
-  ProviderBXinTHPrefs,
-  ProviderPaymiumPrefs,
-  ProviderBtcChinaPrefs,
-  ProviderBitsoPrefs,
-  ProviderBTCMarketsPrefs,
-  ProviderWexPrefs
+  ProviderBitPayPrefs
 } = Local.imports;
 
 const {
@@ -112,36 +85,8 @@ const IndicatorConfigView = new Lang.Class({
     let config = this._indicatorConfig;
 
     let apiConfigViews = {
-      binance: () =>
-        new ProviderBinancePrefs.ConfigView(widget, config),
-      bitstamp: () =>
-        new ProviderBitstampPrefs.ConfigView(widget, config),
-      bitfinex: () =>
-        new ProviderBitfinexPrefs.ConfigView(widget, config),
-      poloniex: () =>
-        new ProviderPoloniexPrefs.ConfigView(widget, config),
-      bitcoinaverage: () =>
-        new ProviderBitcoinAveragePrefs.ConfigView(widget, config),
       bitpay: () =>
         new ProviderBitPayPrefs.ConfigView(widget, config),
-      kraken: () =>
-        new ProviderKrakenPrefs.ConfigView(widget, config),
-      cexio: () =>
-        new ProviderCexioPrefs.ConfigView(widget, config),
-      coinbase: () =>
-        new ProviderCoinbasePrefs.ConfigView(widget, config),
-      bxinth: () =>
-        new ProviderBXinTHPrefs.ConfigView(widget, config),
-      paymium: () =>
-        new ProviderPaymiumPrefs.ConfigView(widget, config),
-      btcchina: () =>
-        new ProviderBtcChinaPrefs.ConfigView(widget, config),
-      bitso: () =>
-        new ProviderBitsoPrefs.ConfigView(widget, config),
-      btcmarkets: () =>
-        new ProviderBTCMarketsPrefs.ConfigView(widget, config),
-      wex: () =>
-        new ProviderWexPrefs.ConfigView(widget, config)
     };
 
     if (this._apiConfigView) {
@@ -162,21 +107,7 @@ const IndicatorConfigView = new Lang.Class({
     let preset = this._indicatorConfig.get('api');
 
     let options = [
-        {label: 'Binance', value: 'binance'},
-        {label: 'BitcoinAverage', value: 'bitcoinaverage'},
-        {label: 'BitStamp', value: 'bitstamp'},
-        {label: 'Bitfinex', value: 'bitfinex'},
-        {label: 'Poloniex', value: 'poloniex'},
-        {label: 'BitPay',   value: 'bitpay'},
-        {label: 'Kraken',   value: 'kraken'},
-        {label: 'CEX.IO',   value: 'cexio'},
-        {label: 'CoinBase', value: 'coinbase'},
-        {label: 'BXinTH',   value: 'bxinth'},
-        {label: 'Paymium',  value: 'paymium'},
-        {label: 'BtcChina', value: 'btcchina'},
-        {label: 'Bitso',    value: 'bitso'},
-        {label: 'BTCMarkets',    value: 'btcmarkets'},
-        {label: 'WEX',      value: 'wex'}
+        {label: 'BitPay',   value: 'bitpay'}
     ];
 
     options.forEach((o) => {

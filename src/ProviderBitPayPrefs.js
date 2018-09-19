@@ -21,7 +21,7 @@ const ConfigView = new Lang.Class({
       config.attributes = {
         api: 'bitpay',
         currency: 'USD',
-        coin: 'BTC',
+        coin: 'BCH',
         attribute: 'last'
       };
 

@@ -12,7 +12,7 @@ const Api = new Lang.Class({
 
   currencies: BaseProvider.DefaultCurrencies,
 
-  coins: ['BTC', 'mBTC'],
+  coins: ['BCH'],
 
   interval: 60, // unclear, should be safe
 
@@ -42,6 +42,6 @@ const Api = new Lang.Class({
   },
 
   getUrl: function (options) {
-    return "https://bitpay.com/api/rates";
+    return "https://bitpay.com/api/rates/BCH";
   }
 });

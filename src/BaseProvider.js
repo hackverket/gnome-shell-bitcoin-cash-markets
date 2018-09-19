@@ -25,8 +25,8 @@ const IndicatorChange = {
 
 // Normalize pseudo-coins like "mBTC" to "BTC"
 const baseCoin = (coin) => {
-  if (coin === "mBTC") {
-    return "BTC";
+  if (coin === "mBCH") {
+    return "BCH";
   }
   return coin;
 }
@@ -79,7 +79,7 @@ const CurrencyRenderer = ({currency, coin, decimals}) => {
   }
 
   return (number) => {
-    if (coin === 'mBTC') {
+    if (coin === 'mBCH') {
       number = Number(number) / 1000.0;
     }
 

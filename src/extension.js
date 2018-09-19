@@ -44,9 +44,9 @@ const _Colors = {
 
 const _Defaults = [
   {
-    api: 'bitcoinaverage',
+    api: 'bitpay',
     currency: 'USD',
-    coin: 'BTC',
+    coin: 'BCH',
     attribute: 'last',
     show_change: true,
     show_base_currency: false
@@ -213,7 +213,7 @@ let IndicatorCollection = new Lang.Class({
   _upgradeSettings: function () {
     const applyDefaults = (options) => {
       if (options.coin === undefined) {
-        options.coin = 'BTC';
+        options.coin = 'BCH';
       }
       return options;
     };

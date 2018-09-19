@@ -108,9 +108,9 @@ const IndicatorCollectionModel = new GObject.Class({
 
   _getDefaults: function () {
     return {
-      api: 'bitcoinaverage',
+      api: 'bitpay',
       currency: 'USD',
-      coin: 'BTC',
+      coin: 'BCH',
       attribute: 'last'
     };
   },
